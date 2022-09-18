@@ -125,7 +125,7 @@ export default function PinnedMap(props) {
         const el = document.getElementById(station.id)
         el.classList.add(styles.pin)
         el.addEventListener("click", setClickedPin.bind(null, el, station))
-    }), [stations])
+    }), [])
 
     return <div className={styles.container}>
         <PowerStationInfoBox station={selected} />
