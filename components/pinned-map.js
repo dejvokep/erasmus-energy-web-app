@@ -2,113 +2,114 @@ import styles from "../styles/PinnedMap.module.css"
 import {useEffect, useState} from "react";
 import PowerStationInfoBox from "./power-station-info-box";
 
+const stations = [{
+    id: "mokra_luka",
+    name: "Mokrá Lúka",
+    type: "Solar",
+    power: 10.874,
+}, {
+    id: "novy_ruskov",
+    name: "Nový Ruskov",
+    type: "Solar",
+    power: 7.88,
+}, {
+    id: "domasa",
+    name: "Veľká Domaša",
+    type: "Hydro",
+    power: 6.2,
+}, {
+    id: "kosice",
+    name: "Košice",
+    type: "Solar",
+    power: 4.02,
+}, {
+    id: "humenne",
+    name: "Humenné",
+    type: "Solar",
+    power: 2,
+}, {
+    id: "drienov",
+    name: "Drienov",
+    type: "Solar",
+    power: 2,
+}, {
+    id: "povazska_bystrica",
+    name: "Považská Bystrica",
+    type: "Hydro",
+    power: 5.5,
+}, {
+    id: "besenova",
+    name: "Bešeňová",
+    type: "Hydro",
+    power: 4.6,
+}, {
+    id: "liptovska_mara",
+    name: "Liptovská Mara",
+    type: "Hydro",
+    power: 198,
+}, {
+    id: "mochovce",
+    name: "Mochovce",
+    type: "Nuclear",
+    power: 520,
+    since: 1982,
+}, {
+    id: "cierny_vah",
+    name: "Čierny Váh",
+    type: "Hydro",
+    power: 75,
+    since: 1981,
+}, {
+    id: "gabcikovo",
+    name: "Gabčíkovo",
+    type: "Hydro",
+    power: 90,
+    since: 1977,
+}, {
+    id: "cerova",
+    name: "Cerová",
+    type: "Wind",
+    power: 3,
+    since: 2003,
+}, {
+    id: "horna_streda",
+    name: "Horná Streda",
+    type: "Hydro",
+    power: 7.3,
+    since: 1954,
+}, {
+    id: "skalite",
+    name: "Skalité",
+    type: "Wind",
+    power: 1.2,
+    since: 2004,
+}, {
+    id: "motova",
+    name: "Môťová",
+    type: "Hydro",
+    power: 17,
+    since: 1958,
+}, {
+    id: "velka_lodina",
+    name: "Malá Lodina",
+    type: "Hydro",
+    power: 68,
+    since: 1974,
+}, {
+    id: "dobsina",
+    name: "Dobšiná",
+    type: "Hydro",
+    power: 24,
+    since: 1953,
+}, {
+    id: "bohunice",
+    name: "Bohunice",
+    type: "Nuclear",
+    power: 1760,
+}];
+
 export default function PinnedMap(props) {
     const [selected, setSelected] = useState();
-    const stations = [{
-        id: "mokra_luka",
-        name: "Mokrá Lúka",
-        type: "Solar",
-        power: 10.874,
-    }, {
-        id: "novy_ruskov",
-        name: "Nový Ruskov",
-        type: "Solar",
-        power: 7.88,
-    }, {
-        id: "domasa",
-        name: "Veľká Domaša",
-        type: "Hydro",
-        power: 6.2,
-    }, {
-        id: "kosice",
-        name: "Košice",
-        type: "Solar",
-        power: 4.02,
-    }, {
-        id: "humenne",
-        name: "Humenné",
-        type: "Solar",
-        power: 2,
-    }, {
-        id: "drienov",
-        name: "Drienov",
-        type: "Solar",
-        power: 2,
-    }, {
-        id: "povazska_bystrica",
-        name: "Považská Bystrica",
-        type: "Hydro",
-        power: 5.5,
-    }, {
-        id: "besenova",
-        name: "Bešeňová",
-        type: "Hydro",
-        power: 4.6,
-    }, {
-        id: "liptovska_mara",
-        name: "Liptovská Mara",
-        type: "Hydro",
-        power: 198,
-    }, {
-        id: "mochovce",
-        name: "Mochovce",
-        type: "Nuclear",
-        power: "520",
-        since: "1982",
-    }, {
-        id: "cierny_vah",
-        name: "Čierny Váh",
-        type: "Hydro",
-        power: "75",
-        since: "1981",
-    }, {
-        id: "gabcikovo",
-        name: "Gabčíkovo",
-        type: "Hydro",
-        power: "90",
-        since: "1977",
-    }, {
-        id: "cerova",
-        name: "Cerová",
-        type: "Wind",
-        power: "3",
-        since: "2003",
-    }, {
-        id: "horna_streda",
-        name: "Horná Streda",
-        type: "Hydro",
-        power: "7.3",
-        since: "1954",
-    }, {
-        id: "skalite",
-        name: "Skalité",
-        type: "Wind",
-        power: "1.2",
-        since: "2004",
-    }, {
-        id: "motova",
-        name: "Môťová",
-        type: "Hydro",
-        power: "17",
-        since: "1958",
-    }, {
-        id: "velka_lodina",
-        name: "Malá Lodina",
-        type: "Hydro",
-        power: "68",
-        since: "1974",
-    }, {
-        id: "dobsina",
-        name: "Dobšiná",
-        type: "Hydro",
-        power: "24",
-        since: "1953",
-    }, {
-        id: "bohunice",
-        name: "Bohunice",
-        type: "Nuclear",
-        power: 1760,
-    }];
 
     function setClickedPin(el, station) {
         setSelected(selected => {
