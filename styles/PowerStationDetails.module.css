@@ -1,0 +1,17 @@
+.container {
+    padding: 10px 100px;
+}
+
+.container p {
+    margin: 0;
+    text-align: center;
+}
+
+.name {
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.value {
+    font-size: 30px;
+}

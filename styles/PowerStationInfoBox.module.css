@@ -1,0 +1,25 @@
+.container {
+    position: absolute;
+    bottom: 100px;
+    display: grid;
+    place-items: center;
+    width: 100%;
+}
+
+.box {
+    display: inline-flex;
+    background-color: white;
+    z-index: 10;
+    border: .1em solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 5px 10px 70px grey;
+}
+
+.location {
+    display: grid;
+    place-items: center;
+    background-color: transparent;
+    border-right: .1em solid black;
+    padding: 0 20px;
+}
