@@ -1,6 +1,7 @@
 .container {
+  margin-top: 100px;
   width: 100%;
-  min-height: 100vh;
+  min-height: calc(100vh - 100px);
   display: grid;
   place-items: center;
 }
@@ -21,7 +22,7 @@
   height: 200px;
 }
 
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 1900px) {
   .centered {
     width: 80%;
   }
@@ -32,6 +33,7 @@
     display: block;
     margin: 100px 20px;
     width: calc(100% - 40px);
+    min-height: 0;
   }
 
   .centered {
