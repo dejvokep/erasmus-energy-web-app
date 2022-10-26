@@ -1,5 +1,5 @@
 .container {
-  margin-top: 100px;
+  margin-top: 50px;
   width: 100%;
   min-height: calc(100vh - 100px);
   display: grid;
@@ -11,7 +11,7 @@
 }
 
 .text {
-  padding-bottom: 50px;
+  padding-bottom: 20px;
   text-align: center;
 }
 
@@ -20,7 +20,7 @@
   display: grid;
   place-items: center;
   height: 100px;
-  padding-bottom: 50px;
+  padding-bottom: 10px;
 }
 
 @media only screen and (max-width: 500px) {

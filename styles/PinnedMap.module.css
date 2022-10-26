@@ -5,7 +5,7 @@
 
 .map {
     height: 100vh;
-    padding: 10%;
+    padding: 100px;
     display: grid;
     place-items: center;
 }
