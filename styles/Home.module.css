@@ -7,7 +7,7 @@
 }
 
 .centered {
-  width: 30%;
+  width: 40%;
 }
 
 .text {
@@ -20,25 +20,7 @@
   display: grid;
   place-items: center;
   height: 100px;
-}
-
-@media only screen and (max-width: 1900px) {
-  .centered {
-    width: 80%;
-  }
-}
-
-@media only screen and (max-width: 750px) {
-  .container {
-    display: block;
-    margin: 100px 20px;
-    width: calc(100% - 40px);
-    min-height: 0;
-  }
-
-  .centered {
-    width: 100%;
-  }
+  padding-bottom: 50px;
 }
 
 @media only screen and (max-width: 500px) {
