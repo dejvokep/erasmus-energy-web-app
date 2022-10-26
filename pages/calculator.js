@@ -142,7 +142,7 @@ export default function Calculator() {
                 <div className={styles.footprint}>
                     <p className={styles.footprintTitle}>Annual estimated CO<sub>2</sub> footprint</p>
                     <h1 className={styles.footprintValue}>{footprint.overall_footprint} tons</h1>
-                    <p className={styles.footprintComposition}>Cars {footprint.cars_footprint}t • Public transport {footprint.public_transport_footprint}t • Water processing {footprint.water_footprint}t • Trash services {footprint.trash_footprint}t • Electricity {footprint.electricity_footprint}t • Heating {footprint.heating_footprint}t</p>
+                    <p className={styles.footprintComposition}>Cars {footprint.cars_footprint}t • Public transport {footprint.public_transport_footprint}t • Water processing {footprint.water_footprint}t • Extra trash services {footprint.trash_footprint}t • Electricity {footprint.electricity_footprint}t • Heating {footprint.heating_footprint}t</p>
                 </div>
             </div>
 
