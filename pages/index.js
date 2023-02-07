@@ -22,7 +22,7 @@ export default function Home() {
             </div>
             <div className={styles.logo}>
                 <div>
-                    <a href='https://erasmus-plus.ec.europa.eu' target='_blank' ><Image width={350} height={100} src="/erasmus-logo.jpg" alt="Erasmus+ Logo"/></a>
+                    <a href='https://erasmus-plus.ec.europa.eu' target='_blank' rel="noreferrer" ><Image width={350} height={100} src="/erasmus-logo.jpg" alt="Erasmus+ Logo"/></a>
                 </div>
             </div>
         </div>

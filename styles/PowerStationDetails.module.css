@@ -1,5 +1,8 @@
 .container {
-    padding: 10px 100px;
+    padding: 10px 5%;
+    display: grid;
+    place-items: center;
+    flex-grow: 1;
 }
 
 .container p {

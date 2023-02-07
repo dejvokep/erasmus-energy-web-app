@@ -1,6 +1,5 @@
 import styles from "../styles/PinnedMap.module.css"
-import {useEffect, useState} from "react";
-import PowerStationInfoBox from "./power-station-info-box";
+import {useEffect} from "react";
 
 const stations = [{
     id: "mokra_luka",
@@ -134,8 +133,7 @@ const stations = [{
     link: "https://www.seas.sk/elektraren/ae-bohunice-v2/",
 }];
 
-export default function PinnedMap(props) {
-    const [selected, setSelected] = useState();
+export default function PinnedMap({ setSelected }) {
 
     function setClickedPin(el, station) {
         setSelected(selected => {
@@ -154,8 +152,6 @@ export default function PinnedMap(props) {
     }), [])
 
     return <div className={styles.container}>
-        <PowerStationInfoBox station={selected} />
-
         <div className={styles.map}>
             <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 987 518">
                 <defs>
