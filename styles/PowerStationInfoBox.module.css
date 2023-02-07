@@ -7,7 +7,9 @@
 }
 
 .box {
-    display: inline-flex;
+    margin: 0 30px;
+    display: flex;
+
     background-color: white;
     z-index: 10;
     border: .1em solid black;
@@ -16,14 +18,48 @@
     box-shadow: 5px 10px 70px grey;
 }
 
+.details {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.details > div {
+    margin: 0 30px;
+}
+
 .location {
     display: grid;
     place-items: center;
     background-color: transparent;
     border-right: .1em solid black;
     padding: 0 20px;
+    text-align: center;
+}
+
+.location h1 {
+    font-size: 25px;
 }
 
 .defaultBox {
     background: white;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 800px) {
+    .container {
+        bottom: 0;
+    }
+
+    .box {
+        width: 100%;
+        border-radius: 0;
+        border: none;
+        border-top: .1em solid black;
+    }
+
+    .defaultBox {
+        width: 100%;
+    }
 }
