@@ -34,7 +34,7 @@ export default function Calculator() {
             heated_rooms_count = rooms_count;
         }
 
-        let CO2_due_to_electricity_generation = 0.00031 //(Tons of CO2 per kWh)
+        let CO2_due_to_electricity_generation = 0.000414 //(Tons of CO2 per kWh)
         let average_school_electricity_consumption_per_square_meter = 100 //(kWh)
         let average_school_room_size = 50 //(m2)
         let CO2_public_transport_per_km = 0.45 //(Tons of CO2)
