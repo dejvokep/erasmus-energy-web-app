@@ -1,5 +1,7 @@
 .container {
     display: flex;
+    flex-wrap: wrap;
+    gap: 130px;
     justify-content: center;
 }
 
@@ -53,7 +55,6 @@
 }
 
 .switch {
-    padding-left: 130px;
     display: inline-flex;
 }
 

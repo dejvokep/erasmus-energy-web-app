@@ -1,6 +1,7 @@
 .container {
     padding: 150px 0 200px 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 140px;
 }
@@ -9,6 +10,7 @@
     position: relative;
     height: 740px;
     width: 440px;
+    flex-shrink: 0;
 
     background: var(--url);
     background-size: cover;
@@ -17,6 +19,7 @@
 }
 
 .text {
+    min-width: 250px;
     max-width: 670px;
     display: grid;
     align-content: center;
