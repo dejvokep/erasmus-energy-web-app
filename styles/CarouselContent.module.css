@@ -1,0 +1,30 @@
+.container {
+    padding: 150px 0 200px 0;
+    display: flex;
+    justify-content: center;
+    gap: 140px;
+}
+
+.image {
+    position: relative;
+    height: 740px;
+    width: 440px;
+
+    background: var(--url);
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+}
+
+.text {
+    max-width: 670px;
+    display: grid;
+    align-content: center;
+}
+
+.text p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: justify;
+}
