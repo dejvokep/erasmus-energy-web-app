@@ -1,12 +1,14 @@
 .background {
-    position: fixed;
+    position: absolute;
     top: 0;
+    left: 0;
+
     width: 100%;
     height: 100vh;
+    overflow: hidden;
     z-index: -100;
+}
 
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.cloud {
+    position: absolute;
 }
