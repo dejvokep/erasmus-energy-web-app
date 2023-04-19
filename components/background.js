@@ -65,6 +65,6 @@ export default function Background() {
     }, [getHeight(), generate]);
 
     return <div className={styles.background} style={{height: getHeight()}}>
-        {clouds.map(cloud => <div key={cloud.position} className={styles.cloud} style={{[`${cloud.alignment}`]: cloud.alignmentPosition, top: cloud.position}}><Image src={`/background/${cloud.image}`} alt={"Cloud background image"} height={cloud.size.y} width={cloud.size.x}/></div>)}
+        {clouds.map(cloud => <div key={cloud.position} className={styles.cloud} style={{[`${cloud.alignment}`]: cloud.alignmentPosition, top: cloud.position}}><Image priority={true} src={`/background/${cloud.image}`} alt={"Cloud background image"} height={cloud.size.y} width={cloud.size.x}/></div>)}
     </div>
 }
