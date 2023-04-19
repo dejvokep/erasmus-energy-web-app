@@ -1,9 +1,48 @@
 .container {
-  margin: 50px 0;
+  padding: 260px 240px 0 240px;
   width: 100%;
-  min-height: calc(100vh - 100px);
-  display: grid;
-  place-items: center;
+}
+
+.title {
+  padding-bottom: 300px;
+}
+
+.title h1 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 175px;
+  line-height: 173px;
+  text-align: center;
+  letter-spacing: -.05em;
+  margin: 0;
+
+  padding: 0 calc((100% - 1050px) / 2);
+}
+
+.squiggle {
+  position: relative;
+  color: #98E000;
+}
+
+.squiggle:after {
+  position: absolute;
+  z-index: -1;
+  bottom: -35px;
+  left: -5%;
+
+  aspect-ratio: 543/73;
+  width: 110%;
+  content: "";
+  background: url("/squiggle.svg");
+  background-size: cover;
+}
+
+.title h1:nth-of-type(odd) {
+  text-align: right;
+}
+
+.title h1:nth-of-type(even) {
+  text-align: left;
 }
 
 .centered {
