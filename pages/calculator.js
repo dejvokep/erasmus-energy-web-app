@@ -1,38 +1,59 @@
 import Head from 'next/head'
 import styles from '../styles/Calculator.module.css';
 import {useRef, useState} from "react";
+import OptionSelect from "../components/form/OptionSelect";
+import NumberInput from "../components/form/NumberInput";
+import FootprintDisplay from "../components/calculator/FootprintDisplay";
+
+const SCHOOL_TYPE_OPTIONS = [
+    {
+        id: "elementary",
+        name: "Elementary"
+    },
+    {
+        id: "middle",
+        name: "Middle"
+    },
+    {
+        id: "high",
+        name: "High"
+    }
+]
+
+const SORTING_TRASH_OPTIONS = [
+    {
+        id: true,
+        name: "Yes"
+    },
+    {
+        id: false,
+        name: "No"
+    }
+]
 
 export default function Calculator() {
-    const [footprint, setFootprint] = useState({
-        cars_footprint: "0.0",
-        public_transport_footprint: "0.0",
-        water_footprint: "0.0",
-        trash_footprint: "0.0",
-        electricity_footprint: "0.0",
-        heating_footprint: "0.0",
-        overall_footprint: "0.0"
-    });
+    const [data, setData] = useState({
+        schoolType: SCHOOL_TYPE_OPTIONS[0].id,
+        students: 0,
+        teachers: 0,
+        rooms: 0,
+        heatedRooms: 0,
+        sortingTrash: SORTING_TRASH_OPTIONS[0].id
+    })
 
-    function validateNumber(ref) {
-        const value = +ref.current.value;
-        if (isNaN(value) || value < 0) {
-            ref.current.value = 0;
-            return 0;
-        }
-        return value;
+    function updateData(id, value) {
+        const newData = {...data};
+        newData[id] = value;
+        setData(newData);
     }
-    function calculate() {
-        const school_type = schoolRef.current.options[schoolRef.current.selectedIndex].id;
-        const students_count = validateNumber(studentsRef);
-        const teachers_count = validateNumber(teachersRef);
-        const rooms_count = validateNumber(roomsRef);
-        let heated_rooms_count = validateNumber(heatedRoomsRef);
-        const sorting_trash = sortingTrashRef.current.checked;
 
-        if (heated_rooms_count > rooms_count) {
-            heatedRoomsRef.current.value = rooms_count;
-            heated_rooms_count = rooms_count;
-        }
+    function generateReport() {
+        const school_type = data.schoolType;
+        const students_count = +data.students;
+        const teachers_count = +data.teachers;
+        const rooms_count = +data.rooms;
+        let heated_rooms_count = +data.heatedRooms;
+        const sorting_trash = data.sortingTrash;
 
         let CO2_due_to_electricity_generation = 0.000414 //(Tons of CO2 per kWh)
         let average_school_electricity_consumption_per_square_meter = 100 //(kWh)
@@ -86,7 +107,7 @@ export default function Calculator() {
         heating_footprint = heated_rooms_count * CO2_due_to_heating_per_year_for_room // (Tons of CO2)
         overall_footprint = cars_footprint + public_transport_footprint + water_footprint + trash_footprint + electricity_footprint + heating_footprint // (Tons of CO2)
 
-        setFootprint({
+        return {
             cars_footprint: cars_footprint.toFixed(1),
             public_transport_footprint: public_transport_footprint.toFixed(1),
             water_footprint: water_footprint.toFixed(1),
@@ -94,58 +115,40 @@ export default function Calculator() {
             electricity_footprint: electricity_footprint.toFixed(1),
             heating_footprint: heating_footprint.toFixed(1),
             overall_footprint: overall_footprint.toFixed(1)
-        });
+        };
     }
-
-    const schoolRef = useRef(), studentsRef = useRef(), teachersRef = useRef(), roomsRef = useRef(), heatedRoomsRef = useRef(), sortingTrashRef = useRef();
 
     return (
         <div className={styles.container}>
             <Head>
                 <title>Calculator | Energy is the future of the world</title>
-                <link rel="shortcut icon" href="/favicon.ico"/>
-                <meta name="viewport" content="width=device-width, initial-scale=1"/>
             </Head>
 
             <div className={styles.centered}>
-                <form className={styles.form}>
-                    <label className={styles.option}>
-                        School type:
-                        <select onChange={calculate} ref={schoolRef}>
-                            <option id="elementary">Elementary</option>
-                            <option id="middle">Middle</option>
-                            <option id="high">High</option>
-                        </select>
-                    </label>
-                    <label className={styles.option}>
-                        Students:
-                        <input type="number" name="Students" defaultValue={0} min={0} onChange={calculate} ref={studentsRef}/>
-                    </label>
-                    <label className={styles.option}>
-                        Teachers:
-                        <input type="number" name="Teachers" defaultValue={0} min={0} onChange={calculate} ref={teachersRef}/>
-                    </label>
-                    <label className={styles.option}>
-                        Rooms:
-                        <input type="number" name="Rooms" defaultValue={0} min={0} onChange={calculate} ref={roomsRef}/>
-                    </label>
-                    <label className={styles.option}>
-                        Heated rooms:
-                        <input type="number" name="Heated rooms" defaultValue={0} min={0} onChange={calculate} ref={heatedRoomsRef}/>
-                    </label>
-                    <label className={styles.option}>
-                        Sorting Trash:
-                        <input type="checkbox" name="Sorting Trash" onChange={calculate} ref={sortingTrashRef}/>
-                    </label>
-                </form>
-
-                <div className={styles.footprint}>
-                    <p className={styles.footprintTitle}>Annual estimated CO<sub>2</sub> footprint</p>
-                    <h1 className={styles.footprintValue}>{footprint.overall_footprint} tons</h1>
-                    <p className={styles.footprintComposition}>Cars {footprint.cars_footprint}t • Public transport {footprint.public_transport_footprint}t • Water processing {footprint.water_footprint}t • Extra trash services {footprint.trash_footprint}t • Electricity {footprint.electricity_footprint}t • Heating {footprint.heating_footprint}t</p>
+                <div className={styles.form}>
+                    <div className={styles.school}>
+                        <OptionSelect name={"School Type"} options={SCHOOL_TYPE_OPTIONS} selected={data.schoolType}
+                                      setSelected={id => updateData("schoolType", id)} distributeOptions={true}/>
+                    </div>
+                    <div className={styles.numbers}>
+                        <NumberInput name={"Nº Students"} value={data.students}
+                                     setValue={value => updateData("students", value)}/>
+                        <NumberInput name={"Nº Teachers"} value={data.teachers}
+                                     setValue={value => updateData("teachers", value)}/>
+                        <NumberInput name={"Nº Rooms"} value={data.rooms}
+                                     setValue={value => updateData("rooms", value)}/>
+                        <NumberInput name={"Nº Heated Rooms"} value={data.heatedRooms}
+                                     setValue={value => updateData("heatedRooms", value)} max={data.rooms}/>
+                    </div>
+                    <div className={styles.trash}>
+                        <OptionSelect name={"Sorting Trash?"} options={SORTING_TRASH_OPTIONS}
+                                      selected={data.sortingTrash} setSelected={id => updateData("sortingTrash", id)}
+                                      distributeOptions={false}/>
+                    </div>
                 </div>
             </div>
 
+            <FootprintDisplay report={generateReport()} />
         </div>
     )
 }

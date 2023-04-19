@@ -1,97 +1,28 @@
 .container {
+    padding: 260px 15px 50px 15px;
     width: 100%;
-    min-height: 100vh;
+}
+
+.centered {
     display: grid;
     place-items: center;
 }
 
-.centered {
-    width: 90%;
-}
-
 .form {
-    width: 30%;
-    margin: 0 auto;
-}
-
-.option {
-    height: 30px;
-    width: 100%;
-    display: block;
-    margin: 10px 0;
-}
-
-.option {
-    font-size: 20px;
-    height: 30px;
-    line-height: 30px;
-}
-
-.option input, .option select {
-    width: 200px;
-    height: 30px;
-    float: right;
-    font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    font-size: 20px;
-    text-align: center;
-}
-
-.footprint {
-    margin-top: 10vh;
-    text-align: center;
-}
-
-.footprintValue {
-    margin: 0;
-    font-size: 70px;
-    padding: 5px 20px;
-}
-
-.footprintTitle, .footprintComposition {
-    margin: 2px 0;
-}
-
-p.active::after {
-    width: 100%;
-}
-
-.options p {
-    position: relative;
-    text-transform: uppercase;
     display: inline-block;
-    margin: 0 40px;
-    padding: 0 10px;
-    font-size: 25px;
-    line-height: 50px;
 }
 
-.options p::after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-
-    content: "";
-    height: 4px;
-    background-color: #39b54a;
+.school {
+    margin-bottom: 30px;
 }
 
-@media only screen and (max-width: 1500px) {
-    .form {
-        width: 50%;
-    }
+.numbers {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
 }
 
-@media only screen and (max-width: 800px) {
-    .form {
-        width: 90%;
-    }
-
-    .centered {
-        width: 95%;
-    }
-
-    .option input, .option select {
-        width: 150px;
-    }
+.trash {
+    margin-top: 30px;
 }
