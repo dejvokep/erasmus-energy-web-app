@@ -1,0 +1,19 @@
+.container {
+    margin-top: 85px;
+    text-align: center;
+}
+
+.sum {
+    margin: 0;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 78px;
+    padding: 12px 0;
+}
+
+.title, .report {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    margin: 2px 0;
+}

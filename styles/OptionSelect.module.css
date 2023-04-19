@@ -1,0 +1,42 @@
+.container {
+    padding: 20px;
+    width: 100%;
+    background: #F7F7F7;
+    border-radius: 10px;
+}
+
+.name {
+    margin: 0;
+    padding-bottom: 14px;
+
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    color: #777777;
+}
+
+.options {
+    display: flex;
+}
+
+.distributed {
+    justify-content: space-around;
+}
+
+.centered {
+    gap: 30px;
+    justify-content: center;
+}
+
+.green {
+    color: #98E000;
+}
+
+.option {
+    margin: 0;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    color: #1E1E1E;
+    cursor: pointer;
+}
