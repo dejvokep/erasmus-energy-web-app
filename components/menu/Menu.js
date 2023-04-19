@@ -1,5 +1,6 @@
 import styles from "../../styles/Menu.module.css"
 import MenuItem from "./MenuItem";
+import {useEffect, useRef} from "react";
 
 const PAGES = [
     {
@@ -21,7 +22,15 @@ const PAGES = [
 ]
 
 export default function Menu() {
-    return <div className={styles.container}>
+    const ref = useRef();
+
+    useEffect(() => {
+        document.onscroll = () => {
+            ref.current.style.setProperty("--color", (document.documentElement.scrollTop || document.body.scrollTop) > 0 ? "lightgrey" : "transparent")
+        }
+    }, []);
+
+    return <div className={styles.container} ref={ref}>
         {PAGES.map(page => <MenuItem key={page.route} route={page.route} name={page.name}/>)}
     </div>
 }
