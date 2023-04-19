@@ -40,6 +40,8 @@ const CLOUDS = [
     },
 ]
 
+const GROUP_HEIGHT = 2800;
+
 export default function Background() {
     const [clouds, setClouds] = useState([]);
     const getHeight = () => typeof document === 'undefined' ? 0 : Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);
@@ -48,11 +50,11 @@ export default function Background() {
         const array = [];
         const height = getHeight();
 
-        for (let group = 0; group*2800 <= height; group++) {
-            for (let i = 0; i < CLOUDS.length && group*2800 + CLOUDS[i].position <= height; i++) {
+        for (let group = 0; group*GROUP_HEIGHT <= height; group++) {
+            for (let i = 0; i < CLOUDS.length && group*GROUP_HEIGHT + CLOUDS[i].position <= height; i++) {
                 array.push({
                     ...CLOUDS[i],
-                    position: group*2800 + CLOUDS[i].position
+                    position: group*GROUP_HEIGHT + CLOUDS[i].position
                 })
             }
         }
@@ -64,7 +66,7 @@ export default function Background() {
         setClouds(generate())
     }, [getHeight(), generate]);
 
-    return <div className={styles.background} style={{height: getHeight()}}>
+    return <div className={styles.background}>
         {clouds.map(cloud => <div key={cloud.position} className={styles.cloud} style={{[`${cloud.alignment}`]: cloud.alignmentPosition, top: cloud.position}}><Image priority={true} src={`/background/${cloud.image}`} alt={"Cloud background image"} height={cloud.size.y} width={cloud.size.x}/></div>)}
     </div>
 }
