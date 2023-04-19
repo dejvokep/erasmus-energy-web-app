@@ -6,6 +6,6 @@ export default function MenuItem({ route, name }) {
     const active = useRouter().route === route;
 
     return <div className={styles.container}>
-        <p className={styles.text}><Link href={route} ><span className={active && styles.active}>{name}</span></Link></p>
+        <p className={styles.text}><Link href={route} ><span className={active ? styles.active : ""}>{name}</span></Link></p>
     </div>
 }
