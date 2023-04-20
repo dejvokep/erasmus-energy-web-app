@@ -17,13 +17,13 @@ export default function Task({number, task, data, modifyData, opened}) {
     }, [])
 
     return <div className={styles.container}>
-        <div className={styles.box}>
+        <div className={styles.box} onClick={handleSwitch}>
             <div>
                 <p className={styles.title}>Task #{number}</p>
                 <p className={styles.name}>{task.name}</p>
             </div>
             <div className={styles.switch}>
-                <div className={`${styles.chevron} ${opened ? styles.rotated : ""}`} onClick={handleSwitch}>
+                <div className={`${styles.chevron} ${opened ? styles.rotated : ""}`}>
                     <ChevronRightIcon/></div>
             </div>
         </div>
