@@ -27,7 +27,7 @@
 .squiggle:after {
   position: absolute;
   z-index: -1;
-  bottom: -35px;
+  bottom: -30px;
   left: -5%;
 
   aspect-ratio: 543/73;
