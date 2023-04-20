@@ -131,8 +131,7 @@ const TASKS = [
                 type: "number",
                 value: data => data.trees.planted,
                 setValue: (modifyData, value) => modifyData(data => data.trees.planted = value)
-            },
-            FORM_CLASSROOMS
+            }
         ],
         calc: data => +data.trees.planted * 0.06
     },
