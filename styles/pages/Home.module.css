@@ -33,7 +33,7 @@
   aspect-ratio: 543/73;
   width: 110%;
   content: "";
-  background: url("/squiggle.svg");
+  background: url("/vectors/squiggle.svg");
   background-size: cover;
 }
 

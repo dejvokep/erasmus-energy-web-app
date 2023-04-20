@@ -33,7 +33,7 @@
     aspect-ratio: 359/148;
     width: 120%;
     content: "";
-    background: url("/circle.svg");
+    background: url("/vectors/circle.svg");
     background-size: cover;
 }
 
