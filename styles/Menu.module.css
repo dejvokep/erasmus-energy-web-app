@@ -11,7 +11,7 @@
     justify-content: space-evenly;
 
     padding: 40px 0;
-    background: rgba(255, 255, 255, 0.95);
+    background: var(--background);
     box-shadow: 5px 10px 100px var(--color);
     transition: .5s;
 }

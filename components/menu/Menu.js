@@ -26,7 +26,9 @@ export default function Menu() {
 
     useEffect(() => {
         document.onscroll = () => {
-            ref.current.style.setProperty("--color", (document.documentElement.scrollTop || document.body.scrollTop) > 0 ? "lightgrey" : "transparent")
+            const scroll = (document.documentElement.scrollTop || document.body.scrollTop) > 0;
+            ref.current.style.setProperty("--color", scroll ? "lightgrey" : "transparent")
+            ref.current.style.setProperty("--background", scroll ? "#FFFFFFF2" : "transparent")
         }
     }, []);
 
