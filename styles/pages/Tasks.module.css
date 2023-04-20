@@ -1,0 +1,12 @@
+.container {
+    padding: 260px 15px 50px 15px;
+    display: grid;
+    place-items: center;
+}
+
+.centered {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 80%;
+}

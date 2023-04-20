@@ -1,0 +1,28 @@
+.container {
+    padding: 260px 15px 50px 15px;
+}
+
+.centered {
+    display: grid;
+    place-items: center;
+    margin-bottom: 85px;
+}
+
+.form {
+    display: inline-block;
+}
+
+.school {
+    margin-bottom: 30px;
+}
+
+.numbers {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+}
+
+.trash {
+    margin-top: 30px;
+}

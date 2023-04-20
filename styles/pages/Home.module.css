@@ -1,0 +1,81 @@
+.container {
+  padding: 260px 240px 0 240px;
+  width: 100%;
+}
+
+.title {
+  padding-bottom: 300px;
+}
+
+.title h1 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 175px;
+  line-height: 173px;
+  text-align: center;
+  letter-spacing: -.05em;
+  margin: 0;
+
+  padding: 0 calc((100% - 1050px) / 2);
+}
+
+.squiggle {
+  position: relative;
+  color: #98E000;
+}
+
+.squiggle:after {
+  position: absolute;
+  z-index: -1;
+  bottom: -35px;
+  left: -5%;
+
+  aspect-ratio: 543/73;
+  width: 110%;
+  content: "";
+  background: url("/squiggle.svg");
+  background-size: cover;
+}
+
+.title h1:nth-of-type(odd) {
+  text-align: right;
+}
+
+.title h1:nth-of-type(even) {
+  text-align: left;
+}
+
+.centered {
+  width: 40%;
+}
+
+.text {
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.logo {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  height: 100px;
+  padding-bottom: 10px;
+}
+
+@media only screen and (max-width: 500px) {
+  .text {
+    padding-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  .centered {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .centered {
+    width: 80%;
+  }
+}

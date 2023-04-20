@@ -1,0 +1,8 @@
+.container {
+    padding: 260px 15px 50px 15px;
+}
+
+.map {
+    display: grid;
+    place-items: center;
+}

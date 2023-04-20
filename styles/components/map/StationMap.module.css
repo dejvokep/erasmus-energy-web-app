@@ -1,0 +1,23 @@
+.container {
+    display: inline-block;
+    position: relative;
+}
+
+.icon {
+    position: absolute;
+    top: calc(var(--y) - 25px);
+    left: calc(var(--x) - 25px);
+    height: 50px;
+    width: 50px;
+    padding: 5px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.icon:hover {
+    padding: 0;
+}
+
+.selected {
+    padding: 0;
+}
