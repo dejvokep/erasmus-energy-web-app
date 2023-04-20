@@ -1,4 +1,6 @@
 .box {
+    display: flex;
+    justify-content: space-between;
     padding: 20px;
     background: #F7F7F7;
     border-radius: 10px;
@@ -10,6 +12,26 @@
     font-size: 17px;
     line-height: 21px;
     color: #777777;
+}
+
+.switch {
+    padding-left: 20px;
+    display: grid;
+    place-items: center;
+}
+.chevron {
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    padding: 4px;
+    border-radius: 15px;
+    transition: .5s;
+}
+.chevron:hover {
+    background: #ECECEC;
+}
+.rotated {
+    transform: rotateZ(90deg);
 }
 
 .name {
@@ -30,7 +52,16 @@
 
 .content {
     margin: 0 20px;
-    padding: 30px;
     background: #ECECEC;
     border-radius: 0 0 10px 10px;
+
+    max-height: 0;
+    overflow: hidden;
+    transition: .5s;
+}
+.inner {
+    padding: 30px;
+}
+.opened {
+    max-height: var(--height);
 }
