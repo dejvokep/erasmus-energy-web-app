@@ -10,12 +10,10 @@
     margin: 0 30px;
     display: flex;
 
-    background-color: white;
+    background-color: #F7F7F7;
     z-index: 10;
-    border: .1em solid black;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 5px 10px 70px grey;
 }
 
 .details {

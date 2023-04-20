@@ -5,7 +5,7 @@ export default function PowerStationInfoBox({station}) {
     if (!station) {
         return <div className={styles.container}>
             <div className={styles.defaultBox}>
-                <PowerStationDetails name="Please select a power station to show details."/>
+                <PowerStationDetails value="Please select a power station to show details."/>
             </div>
         </div>
     }
