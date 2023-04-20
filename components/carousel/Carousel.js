@@ -1,4 +1,4 @@
-import styles from "../../styles/Carousel.module.css";
+import styles from "../../styles/components/carousel/Carousel.module.css";
 import {Fragment, useState} from "react";
 import CarouselSwitch from "./CarouselSwitch";
 import CarouselContent from "./CarouselContent";

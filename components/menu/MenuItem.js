@@ -1,5 +1,5 @@
 import {useRouter} from "next/router";
-import styles from "../../styles/MenuItem.module.css";
+import styles from "../../styles/components/menu/MenuItem.module.css";
 import Link from "next/link";
 
 export default function MenuItem({ route, name }) {

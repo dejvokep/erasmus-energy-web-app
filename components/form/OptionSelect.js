@@ -1,4 +1,4 @@
-import styles from "../../styles/OptionSelect.module.css";
+import styles from "../../styles/components/form/OptionSelect.module.css";
 
 export default function OptionSelect({ name, options, selected, setSelected, distributeOptions }) {
     return <div className={styles.container}>

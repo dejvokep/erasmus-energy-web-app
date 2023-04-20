@@ -1,4 +1,4 @@
-import styles from "../../styles/CarouselSwitch.module.css";
+import styles from "../../styles/components/carousel/CarouselSwitch.module.css";
 
 export default function CarouselSwitch({items, active, setActive}) {
     return <div className={styles.container}>

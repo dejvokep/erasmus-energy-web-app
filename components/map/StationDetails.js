@@ -1,6 +1,6 @@
-import styles from "../styles/PowerStationDetails.module.css"
+import styles from "../../styles/components/map/StationDetails.module.css"
 
-export default function PowerStationDetails({ name, value }) {
+export default function StationDetails({ name, value }) {
     return <div className={styles.container}>
         <div>
             <p className={styles.name}>{name}</p>

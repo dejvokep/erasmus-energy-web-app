@@ -1,4 +1,4 @@
-import styles from "../../styles/NumberInput.module.css";
+import styles from "../../styles/components/form/NumberInput.module.css";
 import {useEffect} from "react";
 
 export default function NumberInput({ name, value, setValue, max = Number.MAX_SAFE_INTEGER}) {

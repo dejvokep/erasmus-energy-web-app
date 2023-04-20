@@ -1,4 +1,4 @@
-import styles from "../styles/Background.module.css";
+import styles from "../../styles/components/layout/Background.module.css";
 import {useCallback, useEffect, useState} from "react";
 import Image from "next/image";
 

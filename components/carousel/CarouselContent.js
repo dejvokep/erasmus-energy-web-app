@@ -1,4 +1,4 @@
-import styles from "../../styles/CarouselContent.module.css"
+import styles from "../../styles/components/carousel/CarouselContent.module.css"
 
 export default function CarouselContent({ item }) {
     return <div className={styles.container}>

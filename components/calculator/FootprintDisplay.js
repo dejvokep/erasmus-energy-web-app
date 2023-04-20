@@ -1,4 +1,4 @@
-import styles from "../../styles/FootprintDisplay.module.css";
+import styles from "../../styles/components/calculator/FootprintDisplay.module.css";
 
 export default function FootprintDisplay({ report, reduction = false }) {
     return <div className={styles.container}>

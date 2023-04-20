@@ -1,7 +1,7 @@
 import {Fragment} from "react";
 import Head from "next/head";
-import Menu from "./menu/Menu";
-import Background from "./background";
+import Menu from "../menu/Menu";
+import Background from "./Background";
 
 export default function Layout(props) {
     return <Fragment>

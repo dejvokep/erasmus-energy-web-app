@@ -1,4 +1,4 @@
-import styles from "../styles/PinnedMap.module.css"
+import styles from "../../styles/components/map/StationMap.module.css"
 import Image from "next/image";
 
 const STATIONS = [{
@@ -190,7 +190,7 @@ const STATIONS = [{
     link: "https://www.seas.sk/elektraren/ae-bohunice-v2/",
 }];
 
-export default function PinnedMap({ selected, setSelected }) {
+export default function StationMap({ selected, setSelected }) {
     return <div className={styles.container}>
         <Image src={"/map/map.svg"} height={624} width={1189} alt={"Slovakia"} priority={true} />
         {STATIONS.map(station => <div key={station.name} className={`${styles.icon} ${selected === station ? styles.selected : ""}`} style={{"--x": `${station.pos.x}%`, "--y": `${station.pos.y}%`}} onClick={setSelected.bind(null, station)} >

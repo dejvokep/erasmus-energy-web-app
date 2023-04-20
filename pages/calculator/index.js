@@ -1,9 +1,9 @@
 import Head from 'next/head'
-import styles from '../styles/Calculator.module.css';
+import styles from '../../styles/pages/Calculator.module.css';
 import {useState} from "react";
-import OptionSelect from "../components/form/OptionSelect";
-import NumberInput from "../components/form/NumberInput";
-import FootprintDisplay from "../components/calculator/FootprintDisplay";
+import OptionSelect from "../../components/form/OptionSelect";
+import NumberInput from "../../components/form/NumberInput";
+import FootprintDisplay from "../../components/calculator/FootprintDisplay";
 
 const SCHOOL_TYPE_OPTIONS = [
     {

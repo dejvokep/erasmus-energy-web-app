@@ -1,7 +1,7 @@
 import Head from "next/head";
-import styles from '../styles/Tasks.module.css';
+import styles from '../../styles/pages/Tasks.module.css';
 import {useState} from "react";
-import Task from "../components/tasks/Task";
+import Task from "../../components/tasks/Task";
 
 const LIGHTING_TYPES = [
     {

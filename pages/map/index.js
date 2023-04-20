@@ -1,8 +1,8 @@
 import Head from 'next/head'
-import PinnedMap from "../components/pinned-map";
-import PowerStationInfoBox from "../components/power-station-info-box";
+import StationMap from "../../components/map/StationMap";
+import StationInfo from "../../components/map/StationInfo";
 import {useState} from "react";
-import styles from "../styles/Map.module.css"
+import styles from "../../styles/pages/Map.module.css"
 
 export default function Map() {
     const [selected, setSelected] = useState();
@@ -14,9 +14,9 @@ export default function Map() {
             </Head>
 
             <div className={styles.map}>
-                <PinnedMap selected={selected} setSelected={setSelected}/>
+                <StationMap selected={selected} setSelected={setSelected}/>
             </div>
-            <PowerStationInfoBox station={selected}/>
+            <StationInfo station={selected}/>
         </div>
     )
 }

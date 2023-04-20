@@ -1,6 +1,6 @@
 import NumberInput from "../form/NumberInput";
 import OptionSelect from "../form/OptionSelect";
-import styles from "../../styles/Task.module.css"
+import styles from "../../styles/components/tasks/Task.module.css"
 import FootprintDisplay from "../calculator/FootprintDisplay";
 import {ChevronRightIcon} from "@heroicons/react/24/outline";
 import {useEffect, useRef} from "react";

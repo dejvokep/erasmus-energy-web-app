@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/pages/Home.module.css'
 import Carousel from "../components/carousel/Carousel";
 
 export default function Home() {

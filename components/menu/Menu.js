@@ -1,4 +1,4 @@
-import styles from "../../styles/Menu.module.css"
+import styles from "../../styles/components/menu/Menu.module.css"
 import MenuItem from "./MenuItem";
 import {useEffect, useRef} from "react";
 
