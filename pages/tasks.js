@@ -53,6 +53,7 @@ const TASKS = [
                 name: "Nº Hours a day saved",
                 type: "number",
                 value: data => data.lighting.reduced,
+                max: () => 24,
                 setValue: (modifyData, value) => modifyData(data => data.lighting.reduced = value)
             },
             {
@@ -97,6 +98,7 @@ const TASKS = [
                 name: "Nº Bottles bought after",
                 type: "number",
                 value: data => data.bottles.after,
+                max: data => data.bottles.before,
                 setValue: (modifyData, value) => modifyData(data => data.bottles.after = value)
             },
             FORM_CLASSROOMS
