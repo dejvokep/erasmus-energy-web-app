@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Calculator.module.css';
-import {useRef, useState} from "react";
+import {useState} from "react";
 import OptionSelect from "../components/form/OptionSelect";
 import NumberInput from "../components/form/NumberInput";
 import FootprintDisplay from "../components/calculator/FootprintDisplay";
@@ -114,7 +114,7 @@ export default function Calculator() {
             trash_footprint: trash_footprint.toFixed(1),
             electricity_footprint: electricity_footprint.toFixed(1),
             heating_footprint: heating_footprint.toFixed(1),
-            overall_footprint: overall_footprint.toFixed(1)
+            footprint: overall_footprint.toFixed(1)
         };
     }
 
