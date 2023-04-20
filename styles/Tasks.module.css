@@ -1,0 +1,10 @@
+.container {
+    padding: 260px 15px 50px 15px;
+    display: grid;
+    place-items: center;
+}
+
+.centered {
+    display: inline-block;
+    max-width: 80%;
+}

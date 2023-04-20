@@ -1,0 +1,36 @@
+.box {
+    padding: 20px;
+    background: #F7F7F7;
+    border-radius: 10px;
+}
+
+.title {
+    margin: 0 0 13px 0;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+    color: #777777;
+}
+
+.name {
+    margin: 0;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+
+    margin-bottom: 85px;
+}
+
+.content {
+    margin: 0 20px;
+    padding: 30px;
+    background: #ECECEC;
+    border-radius: 0 0 10px 10px;
+}
