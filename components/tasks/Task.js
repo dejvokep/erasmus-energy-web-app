@@ -6,14 +6,14 @@ import {ChevronRightIcon} from "@heroicons/react/24/outline";
 import {useEffect, useRef} from "react";
 
 export default function Task({number, task, data, modifyData, opened}) {
-    const ref = useRef();
+    const container = useRef(), inner = useRef();
 
     function handleSwitch() {
         modifyData(data => data.opened = opened ? -1 : number - 1)
     }
 
     useEffect(() => {
-        ref.current.style.setProperty("--height", `${ref.current.scrollHeight}px`)
+        container.current.style.setProperty("--height", `${inner.current.scrollHeight}px`)
     }, [])
 
     return <div className={styles.container}>
@@ -27,8 +27,8 @@ export default function Task({number, task, data, modifyData, opened}) {
                     <ChevronRightIcon/></div>
             </div>
         </div>
-        <div className={`${styles.content} ${opened ? styles.opened : ""}`} ref={ref}>
-            <div className={styles.inner}>
+        <div className={`${styles.content} ${opened ? styles.opened : ""}`} ref={container}>
+            <div className={styles.inner} ref={inner}>
                 <div className={styles.form}>
                     {task.form.map(el => el.type === "number" ?
                         <NumberInput key={el.name} name={el.name} value={el.value(data)}
