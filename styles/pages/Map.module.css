@@ -14,3 +14,10 @@
         overflow-x: scroll;
     }
 }
+
+/* max-width must be the same as with static positioning of station info container */
+@media only screen and (max-width: 800px) {
+    .container {
+        padding-bottom: 0;
+    }
+}
