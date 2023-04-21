@@ -19,4 +19,8 @@
     .map {
         overflow-x: scroll;
     }
+
+    .container {
+        padding-bottom: 200px;
+    }
 }
