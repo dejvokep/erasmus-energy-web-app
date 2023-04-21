@@ -1,6 +1,7 @@
 .container {
     display: inline-block;
     position: relative;
+    min-width: 800px;
 }
 
 .icon {
