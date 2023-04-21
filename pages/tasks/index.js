@@ -3,6 +3,11 @@ import styles from '../../styles/pages/Tasks.module.css';
 import {useState} from "react";
 import Task from "../../components/tasks/Task";
 
+/**
+ * Coefficients and calculating functions contained within this file are from another source. The results produced by
+ * the respective functions using the coefficients, therefore, are owned by the author of that source.
+ */
+
 const LIGHTING_TYPES = [
     {
         id: "incandescent",
@@ -126,8 +131,7 @@ const TASKS = [
                 type: "number",
                 value: data => data.trees.planted,
                 setValue: (modifyData, value) => modifyData(data => data.trees.planted = value)
-            },
-            FORM_CLASSROOMS
+            }
         ],
         calc: data => +data.trees.planted * 0.06
     },
@@ -185,7 +189,8 @@ export default function Tasks() {
         </Head>
 
         <div className={styles.centered}>
-            {TASKS.map((task, index) => <Task key={task.name} number={index + 1} task={task} data={data} modifyData={modifyData} opened={index === data.opened} />)}
+            {TASKS.map((task, index) => <Task key={task.name} number={index + 1} task={task} data={data}
+                                              modifyData={modifyData} opened={index === data.opened}/>)}
         </div>
     </div>
 }

@@ -1,11 +1,11 @@
 .container {
-    padding: 260px 15px 50px 15px;
+    padding: 200px 15px 50px 15px;
 }
 
 .centered {
     display: grid;
     place-items: center;
-    margin-bottom: 85px;
+    margin-bottom: 70px;
 }
 
 .form {

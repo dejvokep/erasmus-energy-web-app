@@ -1,8 +1,22 @@
 .container {
-    padding: 260px 15px 50px 15px;
+    padding: 200px 0 50px 0;
 }
 
 .map {
+    padding: 0 15px;
     display: grid;
     place-items: center;
+    overflow-x: hidden;
+}
+
+@media only screen and (max-width: 800px) {
+    .map {
+        min-height: calc(100vh - 400px);
+    }
+}
+
+@media only screen and (max-width: 830px) {
+    .map {
+        overflow-x: scroll;
+    }
 }

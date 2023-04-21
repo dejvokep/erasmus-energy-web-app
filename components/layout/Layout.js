@@ -2,6 +2,7 @@ import {Fragment} from "react";
 import Head from "next/head";
 import Menu from "../menu/Menu";
 import Background from "./Background";
+import styles from "../../styles/components/layout/Layout.module.css"
 
 export default function Layout(props) {
     return <Fragment>
@@ -12,6 +13,8 @@ export default function Layout(props) {
         </Head>
         <Background />
         <Menu/>
-        {props.children}
+        <main className={styles.page}>
+            {props.children}
+        </main>
     </Fragment>
 }

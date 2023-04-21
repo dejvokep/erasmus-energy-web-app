@@ -4,6 +4,7 @@
     padding: 20px;
     background: #F7F7F7;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .title {
@@ -64,4 +65,10 @@
 }
 .opened {
     max-height: var(--height);
+}
+
+@media only screen and (max-width: 1000px) {
+    .form {
+        grid-template-columns: auto;
+    }
 }

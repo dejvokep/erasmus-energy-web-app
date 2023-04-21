@@ -33,7 +33,7 @@
     aspect-ratio: 359/148;
     width: 120%;
     content: "";
-    background: url("/circle.svg");
+    background: url("/vectors/circle.svg");
     background-size: cover;
 }
 
@@ -73,4 +73,10 @@
 
 .squiggle {
     color: #98E000;
+}
+
+@media only screen and (max-width: 500px) {
+    .title h1 {
+        font-size: 60px;
+    }
 }
