@@ -45,37 +45,35 @@
   text-align: left;
 }
 
-.centered {
-  width: 40%;
+@media only screen and (max-width: 1500px) {
+  .title h1 {
+    font-size: 120px;
+    line-height: 117px;
+    padding: 0 calc((100% - 720px) / 2);
+  }
 }
 
-.text {
-  padding-bottom: 20px;
-  text-align: center;
-}
+@media only screen and (max-width: 1200px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 
-.logo {
-  width: 100%;
-  display: grid;
-  place-items: center;
-  height: 100px;
-  padding-bottom: 10px;
+  .title h1 {
+    font-size: 80px;
+    line-height: 77px;
+    padding: 0 calc((100% - 500px) / 2);
+  }
 }
 
 @media only screen and (max-width: 500px) {
-  .text {
-    padding-bottom: 20px;
+  .title {
+    padding-bottom: 200px;
   }
-}
 
-@media only screen and (max-width: 1600px) {
-  .centered {
-    width: 60%;
-  }
-}
-
-@media only screen and (max-width: 1000px) {
-  .centered {
-    width: 80%;
+  .title h1 {
+    font-size: 60px;
+    line-height: 57px;
+    padding: 0 calc((100% - 370px) / 2);
   }
 }
