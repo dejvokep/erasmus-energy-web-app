@@ -54,7 +54,7 @@
 
 @media only screen and (max-width: 800px) {
     .container {
-        bottom: 0;
+        position: page;
     }
 
     .box {
