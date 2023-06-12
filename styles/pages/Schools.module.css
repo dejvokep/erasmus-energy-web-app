@@ -11,6 +11,10 @@
     max-width: 80%;
 }
 
+.wrapper {
+    overflow-x: auto;
+}
+
 .table {
     text-align: center;
     border-collapse: collapse;
@@ -42,7 +46,7 @@
     cursor: pointer;
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 800px) {
     .container {
         display: block;
     }

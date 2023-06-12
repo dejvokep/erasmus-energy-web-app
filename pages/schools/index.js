@@ -12,21 +12,23 @@ export default function Schools({ schools }) {
 
         <div className={styles.centered}>
             <div>
-                <table className={styles.table}>
-                    <tbody>
-                        <tr>
-                            <th>Name</th>
-                            {TASKS_SORTED.map(task => <th key={task.no} className={styles.link}><Link href={{
-                                pathname: "/tasks",
-                                query: { "task": task.id.toString() }
-                            }}><span>Task #{task.no}: {task.name.substring(0, 20)}...</span></Link></th>)}
-                        </tr>
-                        {schools.map(school => <tr key={school.school_id}>
-                            <td>{school.name}</td>
-                            {TASKS_SORTED.map(task => <td key={task.no}>{school[task.id] ? `✅ (${school[task.id]} tons)` : "❌"}</td>)}
-                        </tr>)}
-                    </tbody>
-                </table>
+                <div className={styles.wrapper}>
+                    <table className={styles.table}>
+                        <tbody>
+                            <tr>
+                                <th>Name</th>
+                                {TASKS_SORTED.map(task => <th key={task.no} className={styles.link}><Link href={{
+                                    pathname: "/tasks",
+                                    query: { "task": task.id.toString() }
+                                }}><span>Task #{task.no}: {task.name.substring(0, 20)}...</span></Link></th>)}
+                            </tr>
+                            {schools.map(school => <tr key={school.school_id}>
+                                <td>{school.name}</td>
+                                {TASKS_SORTED.map(task => <td key={task.no}>{school[task.id] ? `✅ (${school[task.id]} tons)` : "❌"}</td>)}
+                            </tr>)}
+                        </tbody>
+                    </table>
+                </div>
                 <p className={styles.asterisk}><i>*Annual CO<sub>2</sub> emission reduction displayed per task in parentheses.</i></p>
             </div>
 
