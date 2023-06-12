@@ -6,7 +6,7 @@ import {getSchools} from "../../database/Connector";
 export default function Schools({ schools }) {
     return <div className={styles.container}>
         <Head>
-            <title>Tasks | Energy is the future of the world</title>
+            <title>Schools | Energy is the future of the world</title>
         </Head>
 
         <div className={styles.centered}>
