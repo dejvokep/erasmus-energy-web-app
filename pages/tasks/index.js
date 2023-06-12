@@ -38,6 +38,10 @@ export default function Tasks() {
     function modifyData(callback) {
         const newData = {...data};
         callback(newData);
+
+        if (data.opened !== newData.opened)
+            router.push(newData.opened ? {query: {task: newData.opened}} : {}, undefined, {shallow: true})
+
         setData(newData);
     }
 
@@ -48,7 +52,7 @@ export default function Tasks() {
 
         <div className={styles.centered}>
             {TASKS_SORTED.map(task => <Task key={task.name} number={task.no} task={task} data={data}
-                                              modifyData={modifyData} opened={task.id === data.opened}/>)}
+                                            modifyData={modifyData} opened={task.id === data.opened}/>)}
         </div>
     </div>
 }
