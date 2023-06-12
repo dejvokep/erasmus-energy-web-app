@@ -3,10 +3,13 @@ import styles from '../../styles/pages/Tasks.module.css';
 import {useState} from "react";
 import Task from "../../components/tasks/Task";
 import {LIGHTING_TYPES, TASKS_SORTED} from "../../common/tasks";
+import {useRouter} from "next/router";
 
 export default function Tasks() {
+    const router = useRouter();
+
     const [data, setData] = useState({
-        opened: null,
+        opened: router.query.task || null,
         classrooms: 0,
         lighting: {
             type: LIGHTING_TYPES[0].id,

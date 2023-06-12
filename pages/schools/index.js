@@ -2,6 +2,7 @@ import styles from "../../styles/pages/Schools.module.css";
 import Head from "next/head";
 import {TASKS_SORTED} from "../../common/tasks";
 import {getSchools} from "../../database/Connector";
+import Link from "next/link";
 
 export default function Schools({ schools }) {
     return <div className={styles.container}>
@@ -15,7 +16,10 @@ export default function Schools({ schools }) {
                     <tbody>
                         <tr>
                             <th>Name</th>
-                            {TASKS_SORTED.map(task => <th key={task.no}>Task #{task.no}: {task.name.substring(0, 20)}...</th>)}
+                            {TASKS_SORTED.map(task => <th key={task.no} className={styles.link}><Link href={{
+                                pathname: "/tasks",
+                                query: { "task": task.id.toString() }
+                            }}><span>Task #{task.no}: {task.name.substring(0, 20)}...</span></Link></th>)}
                         </tr>
                         {schools.map(school => <tr key={school.school_id}>
                             <td>{school.name}</td>
