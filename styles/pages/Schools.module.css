@@ -1,0 +1,57 @@
+.container {
+    padding: 200px 15px 50px 15px;
+    display: grid;
+    place-items: center;
+}
+
+.centered {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 80%;
+}
+
+.wrapper {
+    overflow-x: auto;
+}
+
+.table {
+    text-align: center;
+    border-collapse: collapse;
+    border-radius: 10px;
+}
+
+.table th, .table td {
+    padding: 20px;
+}
+
+.table tr:nth-of-type(even) {
+    background-color: #F7F7F7;
+}
+
+.table tr:nth-of-type(odd) {
+    background-color: #ECECEC;
+}
+
+.asterisk {
+    text-align: right;
+    margin-top: 5px;
+}
+
+.info {
+    text-align: center;
+}
+
+.link {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+    .container {
+        display: block;
+    }
+
+    .centered {
+        max-width: 100%;
+    }
+}

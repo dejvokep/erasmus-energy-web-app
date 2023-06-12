@@ -9,7 +9,7 @@ export default function Task({number, task, data, modifyData, opened}) {
     const container = useRef(), inner = useRef();
 
     function handleSwitch() {
-        modifyData(data => data.opened = opened ? -1 : number - 1)
+        modifyData(data => data.opened = opened ? null : task.id)
     }
 
     useEffect(() => {
