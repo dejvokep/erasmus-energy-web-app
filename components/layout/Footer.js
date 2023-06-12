@@ -16,6 +16,8 @@ export default function Footer() {
             <div className={styles.appreciation}>
                 <h4>Icons made by</h4>
                 <div className={styles.iconAuthors}>
+                    <p><a href="https://heroicons.com/">Heroicons</a>, licensed under the <a
+                        href="https://github.com/tailwindlabs/heroicons/blob/master/LICENSE">MIT license</a>.</p>
                     <p><a href="https://www.flaticon.com/free-icons/wind-turbine" title="wind turbine icons">Wind
                         turbine icons created by Freepik - Flaticon</a></p>
                     <p><a href="https://www.flaticon.com/free-icons/nuclear-plant" title="nuclear plant icons">Nuclear
