@@ -6,7 +6,7 @@ import {LIGHTING_TYPES, TASKS_SORTED} from "../../common/tasks";
 
 export default function Tasks() {
     const [data, setData] = useState({
-        opened: -1,
+        opened: null,
         classrooms: 0,
         lighting: {
             type: LIGHTING_TYPES[0].id,
@@ -44,8 +44,8 @@ export default function Tasks() {
         </Head>
 
         <div className={styles.centered}>
-            {TASKS_SORTED.map((task, index) => <Task key={task.name} number={index + 1} task={task} data={data}
-                                              modifyData={modifyData} opened={index === data.opened}/>)}
+            {TASKS_SORTED.map(task => <Task key={task.name} number={task.no} task={task} data={data}
+                                              modifyData={modifyData} opened={task.id === data.opened}/>)}
         </div>
     </div>
 }
