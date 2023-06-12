@@ -3,6 +3,7 @@ import Head from "next/head";
 import Menu from "../menu/Menu";
 import Background from "./Background";
 import styles from "../../styles/components/layout/Layout.module.css"
+import Footer from "./Footer";
 
 export default function Layout(props) {
     return <Fragment>
@@ -16,5 +17,6 @@ export default function Layout(props) {
         <main className={styles.page}>
             {props.children}
         </main>
+        <Footer />
     </Fragment>
 }
