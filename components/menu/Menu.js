@@ -18,6 +18,10 @@ const PAGES = [
     {
         route: "/tasks",
         name: "Tasks"
+    },
+    {
+        route: "/schools",
+        name: "Schools"
     }
 ]
 
