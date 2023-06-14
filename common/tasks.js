@@ -101,7 +101,7 @@ export const TASKS = {
                 name: "Nº Bottles bought after",
                 type: "number",
                 value: data => data.bottles.after,
-                max: data => data.bottles.before,
+                max: data => +data.bottles.before,
                 setValue: (modifyData, value) => modifyData(data => data.bottles.after = value)
             },
             FORM_CLASSROOMS
