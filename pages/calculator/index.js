@@ -138,7 +138,7 @@ export default function Calculator() {
                         <NumberInput name={"Nº Rooms"} value={data.rooms}
                                      setValue={value => updateData("rooms", value)}/>
                         <NumberInput name={"Nº Heated Rooms"} value={data.heatedRooms}
-                                     setValue={value => updateData("heatedRooms", value)} max={data.rooms}/>
+                                     setValue={value => updateData("heatedRooms", value)} max={+data.rooms}/>
                     </div>
                     <div className={styles.trash}>
                         <OptionSelect name={"Sorting Trash?"} options={SORTING_TRASH_OPTIONS}
