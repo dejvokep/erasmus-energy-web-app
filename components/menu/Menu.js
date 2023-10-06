@@ -8,6 +8,10 @@ const PAGES = [
         name: "Home"
     },
     {
+        route: "https://blog.energyisthefuture.eu",
+        name: "Blog"
+    },
+    {
         route: "/map",
         name: "Map"
     },
