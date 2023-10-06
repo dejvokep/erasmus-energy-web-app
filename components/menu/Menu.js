@@ -8,7 +8,7 @@ const PAGES = [
         name: "Home"
     },
     {
-        route: "https://blog.energyisthefuture.eu",
+        route: "http://fi.muni.cz/~xproks/eotw/",
         name: "Blog"
     },
     {
